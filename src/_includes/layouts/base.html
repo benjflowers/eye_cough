@@ -6,29 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>{{ title }}</title>
   </head>
-  <header>
-    <ul>
-      <li>
-        <a href="#">Home</a>
-      </li>
-      <li>
-        <a href="#">Services</a>
-      </li>
-      <li>
-        <a href="#">About</a>
-      </li>
-      <li>
-        <a href="#">Portfolio</a>
-      </li>
-      <li>
-        <a href="#">Contact</a>
-      </li>
-      <li>
-        <a href="https://www.instagram.com/eye_cough/">Instagram</a>
-      </li>
-    </ul>
-  </header>
   <body>
-    {% block content %}{% endblock %}
+    {% include "partials/site-head.html" %}
+    <main tabindex="-1" id="main-content">
+      {% block content %}{% endblock %}
+    </main>
   </body>
 </html>
