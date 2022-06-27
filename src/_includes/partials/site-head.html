@@ -7,24 +7,20 @@
         aria-label="Primary"
       >
         <ul class="nav__list">
+          {% for item in navigation.items %}
           <li>
-            <a href="/">Home</a>
+            <a
+              href="{{ item.url }}"
+              {{
+              helpers.getLinkActiveState(item.url,
+              page.url)
+              |
+              safe
+              }}
+              >{{ item.text }}</a
+            >
           </li>
-          <li>
-            <a href="/services">Services</a>
-          </li>
-          <li>
-            <a href="/about">About</a>
-          </li>
-          <li>
-            <a href="/portfolio">Portfolio</a>
-          </li>
-          <li>
-            <a href="/contact">Contact</a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/eye_cough/">Instagram</a>
-          </li>
+          {% endfor %}
         </ul>
       </nav>
     </div>
